@@ -1,4 +1,4 @@
-import PersonalInfo from "../../components/personal"
+import PersonalInfo from "../../components/personals"
 const AboutSection = ({ personalData, PhotoProfile, signature }) => {
     return (
         <>

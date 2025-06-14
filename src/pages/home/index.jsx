@@ -2,6 +2,7 @@ import PhotoProfile from "../../assets/img/profile-square-2.webp"
 import signature from "../../assets/img/signature-1.webp"
 import HeroSection from "../../features/hero"
 import AboutSection from "../../features/about"
+import SkillsSection from "../../features/skills"
 const personalData = [
     {
         label: 'Name',
@@ -28,58 +29,96 @@ const personalData = [
         value: 'Ipsum'
     }
 ]
+const skillData = [
+    {
+        label: 'HTML',
+        value: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
+        percent: 90
+    },
+    {
+        label: 'CSS',
+        value: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
+        percent: 90
+    },
+    {
+        label: 'JavaScript',
+        value: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
+        percent: 80
+    },
+    {
+        label: 'Photoshop',
+        value: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem',
+        percent: 70
+    }
+]
+const timelineData = [
+    {
+        label: 'Work Experience',
+        description: 'Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet adipiscing sem neque sed ipsum.',
+        detail: [
+            {
+                label: 'Etiam Industries',
+                dateRange: 'Jun, 2023 - Current',
+                job: 'Project Lead',
+                jobDetail: 'Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila',
+                list: []
+            },
+            {
+                label: 'Nullam Corp',
+                dateRange: '2019 - 2023',
+                job: 'Senior graphic design specialist',
+                jobDetail: 'Curabitur ullamcorper ultricies nisi nam eget dui etiam rhoncus maecenas tempus',
+                list: [
+                    'Lead in the design, development, and implementation of the graphic, layout, and production communication materials',
+                    'Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.',
+                    'Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design',
+                    'Oversee the efficient use of production project budgets ranging from $2,000 - $25,000'
+                ]
+            },
+            {
+                label: 'Etiam Stepping Stone Ltd.',
+                dateRange: '2015-2019',
+                job: 'Graphic design specialist',
+                jobDetail: 'Curabitur ullamcorper ultricies nisi nam eget dui etiam rhoncus maecenas tempus.',
+                list: []
+            }
+        ]
+    },
+    {
+        label: 'My Education',
+        description: 'Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet adipiscing sem neque sed ipsum.',
+        detail: [
+            {
+                label: 'Vestibulum University',
+                dateRange: '2017-2019',
+                job: 'Diploma in Consequat',
+                jobDetail: 'Curabitur ullamcorper ultricies nisi nam eget dui etiam rhoncus maecenas tempus.',
+                list: []
+            },
+            {
+                label: 'Nullam Corp',
+                dateRange: '2019 - 2023',
+                job: 'Master of Fine Arts & Graphic Design',
+                jobDetail: 'Curabitur ullamcorper ultricies nisi nam eget dui etiam rhoncus maecenas tempus.',
+                list: []
+            },
+            {
+                label: 'Vestibulum University',
+                dateRange: '2015-2019',
+                job: 'Bachelor of Fine Arts & Graphic Design',
+                jobDetail: 'Curabitur ullamcorper ultricies nisi nam eget dui etiam rhoncus maecenas tempus.',
+                list: []
+            }
+        ]
+    }
+
+]
 const Home = () => {
     return (
         <>
             <HeroSection />
             <AboutSection personalData={personalData} PhotoProfile={PhotoProfile} signature={signature} />
-            <section id="skills" className="skills section">
-                <div className="container" data-aos="fade-up" data-aos-delay="100">
-                    <div className="row g-4 skills-animation">
-                        <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                            <div className="skill-box">
-                                <h3>HTML</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                                <span className="text-end d-block">90%</span>
-                                <div className="progress">
-                                    <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                            <div className="skill-box">
-                                <h3>CSS</h3>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
-                                <span className="text-end d-block">90%</span>
-                                <div className="progress">
-                                    <div className="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                            <div className="skill-box">
-                                <h3>JavaScript</h3>
-                                <p>Neque porro quisquam est qui dolorem ipsum quia dolor.</p>
-                                <span className="text-end d-block">80%</span>
-                                <div className="progress">
-                                    <div className="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                            <div className="skill-box">
-                                <h3>Photoshop</h3>
-                                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate.</p>
-                                <span className="text-end d-block">55%</span>
-                                <div className="progress">
-                                    <div className="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <SkillsSection data={skillData} />
             <section id="resume" className="resume section">
                 <div className="container section-title" data-aos="fade-up">
                     <h2>Resume</h2>
@@ -223,13 +262,13 @@ const Home = () => {
                             <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
                                 <div className="portfolio-card">
                                     <div className="portfolio-image">
-                                        <img src="assets/img/portfolio/portfolio-1.webp" className="img-fluid" alt="" loading="lazy"/>
-                                            <div className="portfolio-overlay">
-                                                <div className="portfolio-actions">
-                                                    <a href="assets/img/portfolio/portfolio-1.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-web"><i className="bi bi-eye"></i></a>
-                                                    <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
-                                                </div>
+                                        <img src="assets/img/portfolio/portfolio-1.webp" className="img-fluid" alt="" loading="lazy" />
+                                        <div className="portfolio-overlay">
+                                            <div className="portfolio-actions">
+                                                <a href="assets/img/portfolio/portfolio-1.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-web"><i className="bi bi-eye"></i></a>
+                                                <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                     <div className="portfolio-content">
                                         <span className="category">Web Design</span>
@@ -242,13 +281,13 @@ const Home = () => {
                             <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
                                 <div className="portfolio-card">
                                     <div className="portfolio-image">
-                                        <img src="assets/img/portfolio/portfolio-10.webp" className="img-fluid" alt="" loading="lazy"/>
-                                            <div className="portfolio-overlay">
-                                                <div className="portfolio-actions">
-                                                    <a href="assets/img/portfolio/portfolio-10.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i className="bi bi-eye"></i></a>
-                                                    <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
-                                                </div>
+                                        <img src="assets/img/portfolio/portfolio-10.webp" className="img-fluid" alt="" loading="lazy" />
+                                        <div className="portfolio-overlay">
+                                            <div className="portfolio-actions">
+                                                <a href="assets/img/portfolio/portfolio-10.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i className="bi bi-eye"></i></a>
+                                                <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                     <div className="portfolio-content">
                                         <span className="category">Graphics</span>
@@ -261,13 +300,13 @@ const Home = () => {
                             <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-motion">
                                 <div className="portfolio-card">
                                     <div className="portfolio-image">
-                                        <img src="assets/img/portfolio/portfolio-7.webp" className="img-fluid" alt="" loading="lazy"/>
-                                            <div className="portfolio-overlay">
-                                                <div className="portfolio-actions">
-                                                    <a href="assets/img/portfolio/portfolio-7.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-motion"><i className="bi bi-eye"></i></a>
-                                                    <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
-                                                </div>
+                                        <img src="assets/img/portfolio/portfolio-7.webp" className="img-fluid" alt="" loading="lazy" />
+                                        <div className="portfolio-overlay">
+                                            <div className="portfolio-actions">
+                                                <a href="assets/img/portfolio/portfolio-7.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-motion"><i className="bi bi-eye"></i></a>
+                                                <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                     <div className="portfolio-content">
                                         <span className="category">Motion</span>
@@ -280,13 +319,13 @@ const Home = () => {
                             <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-brand">
                                 <div className="portfolio-card">
                                     <div className="portfolio-image">
-                                        <img src="assets/img/portfolio/portfolio-4.webp" className="img-fluid" alt="" loading="lazy"/>
-                                            <div className="portfolio-overlay">
-                                                <div className="portfolio-actions">
-                                                    <a href="assets/img/portfolio/portfolio-4.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-brand"><i className="bi bi-eye"></i></a>
-                                                    <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
-                                                </div>
+                                        <img src="assets/img/portfolio/portfolio-4.webp" className="img-fluid" alt="" loading="lazy" />
+                                        <div className="portfolio-overlay">
+                                            <div className="portfolio-actions">
+                                                <a href="assets/img/portfolio/portfolio-4.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-brand"><i className="bi bi-eye"></i></a>
+                                                <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                     <div className="portfolio-content">
                                         <span className="category">Branding</span>
@@ -299,13 +338,13 @@ const Home = () => {
                             <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
                                 <div className="portfolio-card">
                                     <div className="portfolio-image">
-                                        <img src="assets/img/portfolio/portfolio-2.webp" className="img-fluid" alt="" loading="lazy"/>
-                                            <div className="portfolio-overlay">
-                                                <div className="portfolio-actions">
-                                                    <a href="assets/img/portfolio/portfolio-2.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-web"><i className="bi bi-eye"></i></a>
-                                                    <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
-                                                </div>
+                                        <img src="assets/img/portfolio/portfolio-2.webp" className="img-fluid" alt="" loading="lazy" />
+                                        <div className="portfolio-overlay">
+                                            <div className="portfolio-actions">
+                                                <a href="assets/img/portfolio/portfolio-2.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-web"><i className="bi bi-eye"></i></a>
+                                                <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                     <div className="portfolio-content">
                                         <span className="category">Web Design</span>
@@ -317,13 +356,13 @@ const Home = () => {
                             <div className="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
                                 <div className="portfolio-card">
                                     <div className="portfolio-image">
-                                        <img src="assets/img/portfolio/portfolio-11.webp" className="img-fluid" alt="" loading="lazy"/>
-                                            <div className="portfolio-overlay">
-                                                <div className="portfolio-actions">
-                                                    <a href="assets/img/portfolio/portfolio-11.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i className="bi bi-eye"></i></a>
-                                                    <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
-                                                </div>
+                                        <img src="assets/img/portfolio/portfolio-11.webp" className="img-fluid" alt="" loading="lazy" />
+                                        <div className="portfolio-overlay">
+                                            <div className="portfolio-actions">
+                                                <a href="assets/img/portfolio/portfolio-11.webp" className="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i className="bi bi-eye"></i></a>
+                                                <a href="portfolio-details.html" className="details-link"><i className="bi bi-arrow-right"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                     <div className="portfolio-content">
                                         <span className="category">Graphics</span>

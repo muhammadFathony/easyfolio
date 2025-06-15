@@ -1,7 +1,7 @@
 const Item = ({ label, dateRange, job, jobDetail, arrDetail }) => {
     return (
         <>
-            {arrDetail.descriptionList.length > 1 ?
+            {arrDetail.length > 1 ?
                 <div className="timeline-item" data-aos="fade-up" data-aos-delay="300">
                     <div className="timeline-left">
                         <h4 className="company">{label}</h4>
@@ -13,11 +13,12 @@ const Item = ({ label, dateRange, job, jobDetail, arrDetail }) => {
                         <p className="description">
                             {jobDetail}
                         </p>
-                        {arrDetail.descriptionList.map((value, key) => (
-                            <ul>
-                                <li key={key}>{value.title}</li>
-                            </ul>
-                        ))
+                        {
+                            arrDetail.map((value, i) => (
+                                <ul key={i}>
+                                    <li>{value}</li>
+                                </ul>
+                            ))
                         }
                         <p></p>
                     </div>
@@ -35,7 +36,6 @@ const Item = ({ label, dateRange, job, jobDetail, arrDetail }) => {
                     </div>
                 </div>
             }
-
         </>
     )
 }
